@@ -1,23 +1,23 @@
 ## List of modules used and reason
 
-# Fortawesome (aka. fontawesome)
+### Fortawesome (aka. fontawesome)
 Lightweight icon in scalable svg format
-# embla-carousel-react
+### embla-carousel-react
 Carousel UI
-# lenis
+### lenis
 Smooth scrolling
-# motion (aka. Framer motion)
+### motion (aka. Framer motion)
 Animations
-# next-view-transitions
+### next-view-transitions
 Transitions between pages
-# Validator + Zod
+### Validator + Zod
 Form validation
-# Zustand
+### Zustand
 state management for NextJS without boilerplate
 
 ## Getting Started
 
-# Development build
+### Development build
 First, run the development server:
 
 ```bash
