@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary-background: #3A53BA;
+  --secondary-background: #112a4d;
+  --primary: #01f2f2;
+  --secondary: #040dbf;
+  --gold: #f2df79;
+  --orange: #F37406;
+  --white: #ffffff;
+  --dark: #252525;
+  --error: #F44336;
+  --disabled: #777777;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-atrotissemisans);
+}
+
+@layer base {
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: 800;
+  }
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: 800;
+  }
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: 800;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--primary-background);
+  color: var(--white);
+  font-family: var(--font-atrotissemisans);
+}
+
+/* For lenis scrolling */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* transition page animation zindex fix */
+::view-transition-old(root),
+::view-transition-new(root){
+  animation: none !important;
+}
+
+::view-transition-group(root){
+  z-index: auto !important;
+}
+
+::view-transition-image-pair(root){
+  isolation: isolate;
+  will-change: transform, opacity, clip-path;
+  z-index: 1;
+}
+
+::view-transition-new(root){
+  z-index: 10000;
+  animation: none !important;
+}
+
+::view-transition-old(root){
+  z-index: 1;
+  animation: none !important;
+}

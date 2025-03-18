@@ -1,0 +1,23 @@
+.embla {
+    overflow: hidden;
+  }
+.embla__container {
+    display: flex;
+}
+.embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+    padding: 20px 40px;
+    height: 30rem;
+}
+@media (min-width: 768px) {
+    .embla__slide {
+      flex: 0 0 calc(100% / 2);
+      height: 40rem;
+    }
+}
+@media (min-width: 1200px) {
+    .embla__slide {
+      flex: 0 0 calc(100% / 3);
+    }
+}
